@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,20 +5,17 @@
 #define FSIZE 1000
 
 
-int main(void){
-
-
-
+int main(void) {
   int character=0,words=0,lines=0,upper_caseL=0,lower_caseL=0,digits=0,shift=0,symbols=0,spaces=0,allleters=0;
-    FILE* file ,*output;
-    char filename[FSIZE];
-    printf("Please enter the filepath of a file to analyze:");
+  FILE* file ,*output;
+  char filename[FSIZE];
+  printf("Please enter the filepath of a file to analyze:");
     
-    scanf("%s",filename);
+  scanf("%s",filename);
   
-    file= fopen(filename,"r");
+  file= fopen(filename,"r");
     
-    if (file==NULL) {
+  if (file==NULL) {
     printf("File is not available.");
     return 0;
   }
@@ -27,7 +23,7 @@ int main(void){
     
     
   // characters
-while((character=fgetc(file))!=EOF) {
+  while((character=fgetc(file))!=EOF) {
     symbols++;
  //lines
     if (character=='\n') {
@@ -39,38 +35,32 @@ while((character=fgetc(file))!=EOF) {
    if (islower(character)) {
       lower_caseL++;
       allleters++;
-     }
+   }
 
  //uppercase letters
    if(isupper(character)){
       upper_caseL++;
-          allleters++;
-      }
+      allleters++;
+    }
     
 
  //digits
    if(isdigit(character)) {
-          digits++;
-      
-    }
+          digits++;     
+   }
 
 //spaces
     if (isspace(character)) {
         spaces++;
-       
     }
     
 //words
-    if(character==' '){
+    if(character==' ') {
         character--;
+    }
     if (character!=' ') {
         words++;
-        }
-
-        
-   
-    }
-        
+    }       
 }
 
     printf("File has %d lowercase letters\n",lower_caseL);
@@ -167,8 +157,6 @@ while((character=fgetc(file))!=EOF) {
 
     fclose(file);
             return 0;
-
-
 
 }
 
