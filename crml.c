@@ -51,7 +51,7 @@ while((character=fgetc(file))!=EOF) {
  //digits
    if(isdigit(character)) {
           digits++;
-       allleters++;
+      
     }
 
 //spaces
