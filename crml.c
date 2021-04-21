@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#define FSIZE 1000
+
+
+int main(void) {
     int character=0,words=0,lines=0,upper_caseL=0,lower_caseL=0,digits=0,shift=0,symbols=0,spaces=0,allleters=0;
     FILE* file ,*output;
     char filename[FSIZE];
@@ -150,4 +158,5 @@
     fclose(file);
     fclose(output);
     return 0;
+
 }
