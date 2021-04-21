@@ -57,7 +57,7 @@ while((character=fgetc(file))!=EOF) {
 //spaces
     if (isspace(character)) {
         spaces++;
-        allleters++;
+       
     }
     
 //words
